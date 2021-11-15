@@ -22,6 +22,10 @@
 
 	<body>
 
+	<form method="post" action="showCourseList.php">
+		Title: <input type="text" Name="title"/>
+		<input type="submit" name="Search" value="Search"/>
+	
 	</body>
 
 </html>
