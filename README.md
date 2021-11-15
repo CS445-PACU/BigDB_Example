@@ -4,8 +4,10 @@
 ## Files
 
 * basicErrorHandling.php
+  *  from PHPExamples  
 * *connDB.php - does not exist, create from connDB_template.php*
 * connDB_template.php
+  *  from PHPExamples. Copy to connDB.php and fill out Database, PUNetID, and Password.
 * findCourseByProfIDCourseID.php
 * findCoursesByProfID.php
 * findCoursesByTitle.php
