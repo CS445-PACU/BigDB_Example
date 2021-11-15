@@ -37,8 +37,17 @@
 
 		//print_r($sth);
 		
-		// run the query
-		$sth -> execute();
+		try
+		{
+			// run the query
+			$sth -> execute();
+		}
+		catch(PDOException $e)
+		{
+			print("The query failed.\n");
+			print("Code: ".$e->getCode(). "\n");
+			print("Message: ". $e->getMessage() . "\n");
+		}
 
 		while ($row = $sth -> fetch())
 		{

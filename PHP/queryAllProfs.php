@@ -13,8 +13,17 @@
 		$rows = array();
 
 		$sth = $dbh -> prepare("SELECT ProfID, FName, LName FROM Professors, People where People.PersonID=Professors.ProfID");
-		// run the query
-		$sth -> execute();
+		try
+		{
+			// run the query
+			$sth -> execute();
+		}
+		catch(PDOException $e)
+		{
+			print("The query failed.\n");
+			print("Code: ".$e->getCode(). "\n");
+			print("Message: ". $e->getMessage() . "\n");
+		}
 
 		while ($row = $sth -> fetch())
 		{

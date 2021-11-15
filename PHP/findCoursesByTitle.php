@@ -17,8 +17,17 @@
 		where People.PersonID=Professors.ProfID and Title like :title
 		and CT.ProfID = Professors.ProfID and C.CourseID=CT.CourseID");
 		$sth->bindValue(":title", "%$Title%");
-		// run the query
-		$sth -> execute();
+		try
+		{
+			// run the query
+			$sth -> execute();
+		}
+		catch(PDOException $e)
+		{
+			print("The query failed.\n");
+			print("Code: ".$e->getCode(). "\n");
+			print("Message: ". $e->getMessage() . "\n");
+		}
 
 		while ($row = $sth -> fetch())
 		{
