@@ -1,7 +1,7 @@
 <?php
   // Author: 			Chadd Williams
-  // File: 				queryFunction.php
-  // Date:				March 18, 2013
+  // File: 				findCoursesByProfID.php
+  // Date:				Nov 15, 2021
   // Class:				CS 445	
   // Project: 		In Class PDO Examples
   // Description: demonstrate a function to run an SQL query and return

@@ -2,8 +2,8 @@
 	require_once('basicErrorHandling.php');
 
   // Author: 			Chadd Williams
-  // File: 				showWorksOn.php
-  // Date:				March 18, 2013
+  // File: 				showCourseList.php
+  // Date:				Nov 15, 2021
   // Class:				CS 445	
   // Project: 		In Class PDO Examples
   // Description: get data from POST variable and run a query

@@ -1,7 +1,7 @@
 <?php
 	// Author: 			Chadd Williams
-  // File: 				skeleton.php
-  // Date:				March 18, 2013
+  // File: 				main.php
+  // Date:				MNov 15, 2021
   // Class:				CS 445	
   // Project: 		In Class PDO Examples
   // Description: skeleton file for PHP/HTML mix
