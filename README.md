@@ -13,7 +13,13 @@
 * queryAllProfs.php
 * showCourseList.php
 * showOneCourse.php
-* test.php
+* test.php - http://localhost/php/PUNETID/BigDB_Example/test.php
+  *   checks PHP environment. Look for pdo_mysql
+  *   Install pdo_mysql via:
+  *   sudo /root/enableUpdates.sh
+  *   sudo zypper in php7-mysql
+  *   sudo /root/disableUpdates.sh
+  *   sudo systemctl restart apache2
 
 
 
