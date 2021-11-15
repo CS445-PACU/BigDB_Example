@@ -23,7 +23,7 @@
 	<body>
 
 	<form method="post" action="showCourseList.php">
-		Title: <input type="text" Name="title"/>
+		Title: <input type="text" Name="Title"/>
 		<input type="submit" name="Search" value="Search"/>
 </form>
 
@@ -44,7 +44,7 @@
       <input TYPE="submit" NAME="Search" VALUE="Search" />
 
 
-	
+		</form>
 	</body>
 
 </html>

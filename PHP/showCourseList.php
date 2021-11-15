@@ -22,9 +22,9 @@
  	}
 	 elseif (isset ($_POST['Title']))
 	 {
-		 //require_once('findCoursesByTitle.php');
+		 require_once('findCoursesByTitle.php');
 		$Title = $_POST['Title'];
-		//$rows = findCoursesByTitle($dbh, $Ttitle);
+		$rows = findCoursesByTitle($dbh, $Title);
 	 }
 	 else
 	 {
