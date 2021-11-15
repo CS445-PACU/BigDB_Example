@@ -25,6 +25,25 @@
 	<form method="post" action="showCourseList.php">
 		Title: <input type="text" Name="title"/>
 		<input type="submit" name="Search" value="Search"/>
+</form>
+
+<form method="post" action="showCourseList.php">
+	Professor:
+	<select NAME="ProfID">
+		<?php
+			require_once('queryAllProfs.php');
+			$allProfs = queryAllProfs($dbh);
+
+			foreach ($allProfs as $prof)
+			{
+				print("<option value=" . $prof['ProfID'].">".
+				$prof['FName']. " " . $prof['LName']."</option>");
+			}
+		?>
+    </select>
+      <input TYPE="submit" NAME="Search" VALUE="Search" />
+
+
 	
 	</body>
 
