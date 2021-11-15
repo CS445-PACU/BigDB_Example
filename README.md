@@ -9,19 +9,33 @@
 * connDB_template.php
   *  from PHPExamples. Copy to connDB.php and fill out Database, PUNetID, and Password.
 * findCourseByProfIDCourseID.php
+  *  Query to find one Course and statistics.
 * findCoursesByProfID.php
+  *  Query to find all Courses by a ProfID
 * findCoursesByTitle.php
+  *  Query to find all Courses by a partial title match.
+  *  Example of using "like %value%" and bindValue()!
 * main.php
+  *  Starting page! Based on skeleton.php from PHPExamples.
 * queryAllProfs.php
+  *   Find all Professors. 
+  *   Used to fill the drop down box in main.php.
 * showCourseList.php
+  *   Show Courses
+  *   Either use ProfID or Title as a filter!
 * showOneCourse.php
+  *   Chow one Course.
+  *   Receive ProfID and CourseID through the URL via GET
+  *   Used by showCourseList.php
 * test.php - http://localhost/php/PUNETID/BigDB_Example/test.php
-  *   checks PHP environment. Look for pdo_mysql
-  *   Install pdo_mysql via:
-  *   sudo /root/enableUpdates.sh
-  *   sudo zypper in php7-mysql
-  *   sudo /root/disableUpdates.sh
-  *   sudo systemctl restart apache2
+  *   checks PHP environment. 
+  *   Look for pdo_mysql
+  *   If pdo_mysql is missing:
+      *   Install pdo_mysql via:
+      *   sudo /root/enableUpdates.sh
+      *   sudo zypper in php7-mysql
+      *   sudo /root/disableUpdates.sh
+      *   sudo systemctl restart apache2
 
 
 
