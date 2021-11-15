@@ -10,11 +10,12 @@
   *  from PHPExamples. Copy to connDB.php and fill out Database, PUNetID, and Password.
 * findCourseByProfIDCourseID.php
   *  Query to find one Course and statistics.
+  *  Use of Group By, SUM(), and CASE!
 * findCoursesByProfID.php
   *  Query to find all Courses by a ProfID
 * findCoursesByTitle.php
   *  Query to find all Courses by a partial title match.
-  *  Example of using "like %value%" and bindValue()!
+  *  Example of using *"like %value%"* and bindValue()!
 * main.php
   *  Starting page! Based on skeleton.php from PHPExamples.
 * queryAllProfs.php
