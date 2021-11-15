@@ -15,7 +15,7 @@
 		$sth = $dbh -> prepare("SELECT Title, Section, LName FROM 
 		Professors, People, CurrentlyTeaching as CT, Courses as C 
 		where People.PersonID=Professors.ProfID and Professors.ProfID=:profID
-		and CT.ProfID = Professors.ProfID");
+		and CT.ProfID = Professors.ProfID and C.CourseID=CT.CourseID");
 		$sth->bindValue(":profID", $ProfID);
 		// run the query
 		$sth -> execute();
