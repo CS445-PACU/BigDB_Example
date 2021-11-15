@@ -14,16 +14,16 @@
 
 		$sth = $dbh -> prepare("SELECT Title, Section, LName, MaxSize, count(*) as Enrolled FROM 
 		Professors, People, CurrentlyTeaching as CT, Courses as C, CurrentlyEnrolled as CE
-		where People.PersonID=Professors.ProfID and Professors.ProfID=:profID and 
-		C.CourseID=:courseID
+		where People.PersonID=Professors.ProfID and Professors.ProfID=:pID and 
+		C.CourseID=:cID
 		and CT.ProfID = Professors.ProfID and C.CourseID=CT.CourseID 
 		and CE.CourseID=C.CourseID
 		Group by C.CourseID, Professors.ProfID		
 		");
-		$sth->bindValue(":profID", $ProfID);
-		$sth->bindValue(":courseID", $CourseID);
+		$sth->bindValue(":pID", $ProfID);
+		$sth->bindValue(":cID", $CourseID);
 
-		print_r($sth);
+		//print_r($sth);
 		
 		// run the query
 		$sth -> execute();

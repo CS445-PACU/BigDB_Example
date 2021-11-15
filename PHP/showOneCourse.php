@@ -17,7 +17,7 @@
  	{
 		 require_once('findCourseByProfIDCourseID.php');
 		$ProfID = $_GET['ProfID'];
-		$CourseID = $_GET['ProfID'];
+		$CourseID = $_GET['CourseID'];
 		$rows = findCoursesByProfIDCourseID($dbh, $ProfID,$CourseID);
  	}
 	 else
