@@ -12,7 +12,7 @@
 	{
 		$rows = array();
 
-		$sth = $dbh -> prepare("SELECT Title, Section, LName FROM 
+		$sth = $dbh -> prepare("SELECT Title, Section, LName, CT.ProfID, C.CourseID FROM 
 		Professors, People, CurrentlyTeaching as CT, Courses as C 
 		where People.PersonID=Professors.ProfID and Title like :title
 		and CT.ProfID = Professors.ProfID and C.CourseID=CT.CourseID");

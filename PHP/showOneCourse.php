@@ -13,19 +13,13 @@
 	$dbh = db_connect();
 	$rows = []; // default value of empty
  	
-	if( isset ($_POST['ProfID']) )
+	if( isset ($_GET['ProfID']) && isset($_GET['CourseID']) )
  	{
-		 require_once('findCoursesByProfID.php');
-		$ProfID = $_POST['ProfID'];
-		$rows = findCoursesByProfID($dbh, $ProfID);
-
+		 require_once('findCourseByProfIDCourseID.php');
+		$ProfID = $_GET['ProfID'];
+		$CourseID = $_GET['ProfID'];
+		$rows = findCoursesByProfIDCourseID($dbh, $ProfID,$CourseID);
  	}
-	 elseif (isset ($_POST['Title']))
-	 {
-		 require_once('findCoursesByTitle.php');
-		$Title = $_POST['Title'];
-		$rows = findCoursesByTitle($dbh, $Title);
-	 }
 	 else
 	 {
 		header('Location: main.php');
@@ -37,10 +31,11 @@
 	foreach ($rows as $row)
 	{
 		print("<tr>");
-		print("<td>".$row['Title']."</td>");
-		print("<td>".$row['Section']."</td>");
-		print("<td>".$row['LName']."</td>");
-		print("<td> <a href=\"showOneCourse.php?ProfID=".$row['ProfID']. "&CourseID=".$row['CourseID']."\">View</a></td>");
+		print("<td>Title: ".$row['Title']."</td>");
+		print("<td>Section: ".$row['Section']."</td>");
+		print("<td>MaxSize: ".$row['MaxSize']."</td>");
+		print("<td>Enrolled: ".$row['Enrolled']."</td>");
+		print("<td>Professor: ".$row['LName']."</td>");
 		print("</tr>");
 
 	}
