@@ -40,4 +40,5 @@
 
 	}
 	print("</table>");
+	dba_close($dbh);
 ?>   

@@ -45,4 +45,6 @@
 
 	}
 	print("</table>");
+
+	db_close($dbh);
 ?>   
