@@ -1,4 +1,4 @@
-# BigDB
+# BigDB_Example
 
 ## VS Code
 
@@ -20,10 +20,10 @@ In the terminal, type
 make copy
 ```
 
-This will copy your PHP code to /srv/www/htdocs/php/PUNETID/BigDB
+This will copy your PHP code to /srv/www/htdocs/php/PUNETID/BigDB_Example
 
 You can open this website in your VM via:
 
-http://localhost/php/PUNETID/BigDB/
+http://localhost/php/PUNETID/BigDB_Example/
 
 (hint: you can edit this README file to change PUNETID to your actual PUNETID so you can use the link above.)
