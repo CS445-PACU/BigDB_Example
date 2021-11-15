@@ -25,9 +25,16 @@
 		header('Location: main.php');
 	 }
 
+	print("<H1>A Course</H1>");
+
+	print("<a href=\"main.php\">Search Again</a>");
+
+
 	// display data in table
 
-	print("<table>");
+	print("<table border=1 cellpadding=4>");
+
+
 	foreach ($rows as $row)
 	{
 		print("<tr>");
@@ -40,5 +47,5 @@
 
 	}
 	print("</table>");
-	dba_close($dbh);
+	db_close($dbh);
 ?>   

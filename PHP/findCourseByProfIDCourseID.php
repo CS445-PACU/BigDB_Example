@@ -12,12 +12,21 @@
 	{
 		$rows = array();
 
-		$sth = $dbh -> prepare("SELECT Title, Section, LName, MaxSize, count(*) as Enrolled FROM 
-		Professors, People, CurrentlyTeaching as CT, Courses as C, CurrentlyEnrolled as CE
+
+		// this is a tricky query since you want to show courses with
+		// zero students.  So a LEFT JOIN with CurrentlyEnrolled is necessary.
+		// This means you always get at least 1 row back, so you can't just
+		// count the rows to determine how many students are enrolled.
+		//
+		// CE.CourseID is NULL if no students are enrolled.
+		// use a CASE (like a switch in C++) to check for NULL to determine 
+		// if there is an enrolled student.
+		$sth = $dbh -> prepare("SELECT Title, Section, LName, MaxSize, sum(CASE WHEN CE.CourseID is NULL THEN 0 ELSE 1 END) as Enrolled FROM 
+		Professors, People, CurrentlyTeaching as CT, Courses as C left join CurrentlyEnrolled as CE 
+		on (C.CourseID=CE.CourseID)
 		where People.PersonID=Professors.ProfID and Professors.ProfID=:pID and 
 		C.CourseID=:cID
 		and CT.ProfID = Professors.ProfID and C.CourseID=CT.CourseID 
-		and CE.CourseID=C.CourseID
 		Group by C.CourseID, Professors.ProfID		
 		");
 		$sth->bindValue(":pID", $ProfID);

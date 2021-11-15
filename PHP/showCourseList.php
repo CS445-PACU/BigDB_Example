@@ -32,8 +32,19 @@
 	 }
 
 	// display data in table
+	print("<H1>Course Listing</H1>");
 
-	print("<table>");
+	print("<a href=\"main.php\">Search Again</a>");
+
+	print("<table border=1 cellpadding=4>");
+
+	print("<tr>");
+	print("<td>Title</td>");
+	print("<td>Section</td>");
+	print("<td>Professor</td>");
+	print("<td>Link to Course</td>");
+	print("</tr>");
+
 	foreach ($rows as $row)
 	{
 		print("<tr>");
