@@ -63,6 +63,6 @@ This will copy your PHP code to /srv/www/htdocs/php/PUNETID/BigDB_Example
 
 You can open this website in your VM via:
 
-http://localhost/php/PUNETID/BigDB_Example/
+http://localhost/php/PUNETID/BigDB_Example/main.php
 
 (hint: you can edit this README file to change PUNETID to your actual PUNETID so you can use the link above.)
