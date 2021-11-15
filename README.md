@@ -3,6 +3,8 @@
 
 ## Files
 
+* main.php
+  *  **Starting page!** Based on skeleton.php from PHPExamples.
 * basicErrorHandling.php
   *  from PHPExamples  
 * *connDB.php - does not exist, create from connDB_template.php*
@@ -11,13 +13,14 @@
 * findCourseByProfIDCourseID.php
   *  Query to find one Course and statistics.
   *  Use of Group By, SUM(), and CASE!
+  *  Used by showOneCourse.php
 * findCoursesByProfID.php
   *  Query to find all Courses by a ProfID
+  *  Used by showCourseList.php
 * findCoursesByTitle.php
   *  Query to find all Courses by a partial title match.
   *  Example of using *"like %value%"* and bindValue()!
-* main.php
-  *  Starting page! Based on skeleton.php from PHPExamples.
+  *  Used by showCourseList.php
 * queryAllProfs.php
   *   Find all Professors. 
   *   Used to fill the drop down box in main.php.
@@ -25,7 +28,7 @@
   *   Show Courses
   *   Either use ProfID or Title as a filter!
 * showOneCourse.php
-  *   Chow one Course.
+  *   Show one Course.
   *   Receive ProfID and CourseID through the URL via GET
   *   Used by showCourseList.php
 * test.php - http://localhost/php/PUNETID/BigDB_Example/test.php
