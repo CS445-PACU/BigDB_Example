@@ -21,6 +21,9 @@
 		// CE.CourseID is NULL if no students are enrolled.
 		// use a CASE (like a switch in C++) to check for NULL to determine 
 		// if there is an enrolled student.
+
+		// NOTE: the database does not track student per course section so
+		// the Enrolled calculation is only best effort.
 		$sth = $dbh -> prepare("SELECT Title, Section, LName, MaxSize, sum(CASE WHEN CE.CourseID is NULL THEN 0 ELSE 1 END) as Enrolled FROM 
 		Professors, People, CurrentlyTeaching as CT, Courses as C left join CurrentlyEnrolled as CE 
 		on (C.CourseID=CE.CourseID)
