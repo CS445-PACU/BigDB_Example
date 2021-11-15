@@ -11,6 +11,6 @@ all: copy
 
 copy: 
 	echo ${USER}
-	mkdir -p /srv/www/htdocs/php/${USER}/BigDB
-	chmod o+rx -R /srv/www/htdocs/php/${USER}/BigDB
-	rsync -ahv * /srv/www/htdocs/php/${USER}/BigDB
+	mkdir -p /srv/www/htdocs/php/${USER}/BigDB_Example
+	chmod o+rx -R /srv/www/htdocs/php/${USER}/BigDB_Example
+	rsync -ahv * /srv/www/htdocs/php/${USER}/BigDB_Example
