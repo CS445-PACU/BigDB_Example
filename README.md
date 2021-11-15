@@ -1,5 +1,22 @@
 # BigDB_Example
 
+
+## Files
+
+* basicErrorHandling.php
+* *connDB.php - does not exist, create from connDB_template.php*
+* connDB_template.php
+* findCourseByProfIDCourseID.php
+* findCoursesByProfID.php
+* findCoursesByTitle.php
+* main.php
+* queryAllProfs.php
+* showCourseList.php
+* showOneCourse.php
+* test.php
+
+
+
 ## VS Code
 
 Use VS Code to open the folder PHP inside this project.  This folder contains an example PHP file and the necessary configuration to get the debugger working.
