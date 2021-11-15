@@ -10,7 +10,7 @@
       "request": "launch",
       "port": 9003,
       "pathMappings" :
-      {"/srv/www/htdocs/php/${env:USER}/BigDB": "${workspaceRoot}"},
+      {"/srv/www/htdocs/php/${env:USER}/BigDB_Example": "${workspaceRoot}"},
     },
     {
       "name": "Launch currently open script",
