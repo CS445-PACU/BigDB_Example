@@ -1,5 +1,7 @@
 # BigDB_Example
 
+This uses the [College Database](https://github.com/CS445F21-PACU/CS445f21_InClassExamples/blob/main/CollegeDBExample/CreateDatabase_IntroSQL_VARCHAR.sql) from class.
+
 
 ## Files
 
